@@ -1,0 +1,118 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Insurance EZ LLC Home":
+    - /url: "#"
+    - text: Insurance EZ, LLC
+  - navigation "Insurance services":
+    - link "ACA Plans":
+      - /url: "#services"
+    - link "Medicare":
+      - /url: "#services"
+    - link "Life Insurance":
+      - /url: "#services"
+- heading "Insurance Made Simple, Coverage Made Easy" [level=1]
+- paragraph: Licensed insurance agency helping individuals and families navigate ACA, Medicare, and Life Insurance with confidence and ease.
+- link "🏥 Get Coverage Now":
+  - /url: "#contact"
+- link "📋 Our Services":
+  - /url: "#services"
+- link "🔒 Privacy Policy":
+  - /url: "#privacy"
+- text: Contact us to start your insurance coverage journey 🏥
+- heading "What We Do" [level=3]
+- paragraph: Comprehensive insurance services including ACA marketplace plans, Medicare Advantage & Part D, Medicare Supplements, and Life Insurance. We guide you through every step of enrollment and help you understand your options.
+- text: 📱
+- heading "Message Purpose" [level=3]
+- paragraph: "We send helpful SMS reminders with your consent: appointment notifications, enrollment deadlines, and important updates. All messages are informational only - no promotional spam, ever."
+- text: ⚙️
+- heading "Opt-In / Opt-Out / Help Keywords" [level=3]
+- paragraph:
+  - strong: "Opt-In Keyword:"
+  - text: START Thank you for opting into SMS messaging from Insurance EZ LLC. Message frequency varies. To opt out, text STOP. For assistance, text HELP or visit
+  - link "myinsuranceez.com":
+    - /url: https://myinsuranceez.com/
+  - text: . Message & data rates may apply.
+  - strong: "Opt-Out Keyword:"
+  - text: STOP You will no longer receive messages from Insurance EZ LLC. To opt back in at any time reply START.
+  - strong: "Help Keyword:"
+  - text: HELP Thank you for contacting Insurance EZ LLC. You can find help online at
+  - link "myinsuranceez.com":
+    - /url: https://myinsuranceez.com/
+  - text: .
+- heading "Contact" [level=3]
+- paragraph:
+  - text: "Phone: (954) 736-1704 Email: help@myinsuranceez.com 10620 GRIFFIN RD, Davie, FL 33328, USA Website:"
+  - link "https://myinsuranceez.com":
+    - /url: https://myinsuranceez.com
+- text: 📞
+- strong: Call Us
+- link "(954) 736-1704":
+  - /url: tel:9547361704
+- text: ✉️
+- strong: Email Us
+- link "help@myinsuranceez.com":
+  - /url: mailto:help@myinsuranceez.com
+- text: 🌐
+- strong: Visit Online
+- link "myinsuranceez.com":
+  - /url: https://myinsuranceez.com
+- text: 📍
+- strong: Visit Us
+- text: 10620 Griffin Rd Davie, FL 33328
+- heading "🔒 Privacy Policy" [level=3]
+- paragraph:
+  - strong: "Effective Date:"
+  - text: August 2025
+- paragraph: Insurance EZ LLC is committed to protecting your privacy and personal information security.
+- heading "Information We Collect" [level=4]
+- list:
+  - listitem: Name and contact information
+  - listitem: Date of birth and insurance details
+  - listitem: Health plan information (as needed)
+  - listitem: Communications preferences
+- heading "How We Use Your Information" [level=4]
+- list:
+  - listitem: Provide and manage insurance services
+  - listitem: Send appointment reminders and policy updates
+  - listitem: Communicate important deadlines
+  - listitem: Comply with legal requirements
+- heading "Information Sharing" [level=4]
+- paragraph: "We never sell your personal information. We only share data with:"
+- list:
+  - listitem: Insurance carriers for policy servicing
+  - listitem: Government agencies (as required by law)
+  - listitem: Approved service providers
+- heading "SMS Privacy" [level=4]
+- paragraph:
+  - strong: Your SMS consent is never shared with third parties.
+  - text: We use your mobile number solely for insurance-related communications with your explicit permission.
+- heading "Your Rights" [level=4]
+- paragraph: Request access, correction, or deletion of your personal information by contacting us directly.
+- paragraph:
+  - strong: "Contact:"
+  - text: (954) 736-1704 • help@myinsuranceez.com
+- heading "📋 SMS Terms & Conditions" [level=3]
+- paragraph:
+  - strong: "Effective Date:"
+  - text: August 2025
+- heading "Message Purpose" [level=4]
+- paragraph: "Informational SMS only: appointment reminders, plan renewals, enrollment deadlines, and time-sensitive insurance updates."
+- heading "Frequency & Consent" [level=4]
+- paragraph: Message frequency varies by client needs and enrollment periods. All messages require your written, verbal, or electronic consent.
+- heading "Opt-Out Instructions" [level=4]
+- paragraph:
+  - text: Reply
+  - strong: STOP
+  - text: to cancel anytime. Reply
+  - strong: HELP
+  - text: for assistance.
+- heading "Charges & Privacy" [level=4]
+- paragraph:
+  - text: Message and data rates may apply per your carrier plan.
+  - strong: SMS consent is not shared with third parties.
+- heading "Support" [level=4]
+- paragraph: (954) 736-1704 • help@myinsuranceez.com
+- contentinfo: © 2025 Insurance EZ, LLC. All rights reserved. "SMS consent is not shared with third parties."
+```

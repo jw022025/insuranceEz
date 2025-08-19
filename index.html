@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance EZ, LLC - ACA, Medicare & Life Insurance Made Easy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+:root { 
+    --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --surface: rgba(255, 255, 255, 0.95);
+    --surface-glass: rgba(255, 255, 255, 0.1);
+    --surface-hover: rgba(255, 255, 255, 0.15);
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-light: #718096;
+    --accent: #005B96; 
+    --accent2: #4A90E2; 
+    --accent-light: #E3F2FD;
+    --success: #48bb78;
+    --warning: #ed8936;
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 25px 80px rgba(0, 0, 0, 0.15);
+    --border-radius: 20px;
+    --border-radius-sm: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--bg);
+}
+
+.animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 2rem 1rem; 
+}
+
+.glass-card {
+    background: var(--surface);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+header { 
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+    margin-bottom: 3rem;
+}
+
+.header-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 1.5rem 2rem;
+    background: var(--surface-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.brand { 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+    font-weight: 700; 
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: var(--accent);
+    transition: var(--transition);
+}
+
+.logo { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: var(--border-radius-sm); 
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: grid; 
+    place-items: center; 
+    font-weight: 900; 
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 91, 150, 0.3);
+}
+
+.nav-pills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-pill {
+    padding: 0.5rem 1rem;
+    background: var(--surface-glass);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.nav-pill:hover {
+    background: var(--surface-hover);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.hero { 
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 4rem 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 { 
+    font-size: clamp(2.5rem, 6vw, 4rem); 
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem; 
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-subtitle { 
+    color: var(--text-secondary); 
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem); 
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    animation: slideUp 1s ease-out 0.2s both;
+}
+
+.cta-buttons { 
+    display: flex; 
+    gap: 1rem; 
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: slideUp 1s ease-out 0.4s both;
+}
+
+.btn { 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    padding: 1rem 2rem; 
+    border-radius: var(--border-radius-sm); 
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.btn-primary { 
+    background: linear-gradient(135deg, var(--accent), var(--accent2)); 
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 91, 150, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 91, 150, 0.4);
+}
+
+.btn-secondary {
+    background: var(--surface);
+    color: var(--text-primary);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary:hover {
+    background: var(--surface-hover);
+    transform: translateY(-3px);
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+}
+
+.cards-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 2rem; 
+}
+
+.card { 
+    padding: 2rem;
+    color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-sm);
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 91, 150, 0.2);
+}
+
+.card h3 { 
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem; 
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: white;
+}
+
+.highlight-card h3,
+.highlight-card p {
+    color: white;
+}
+
+.highlight-card::before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.contact-section {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    color: white;
+    margin: 0 auto 1rem;
+    box-shadow: 0 10px 25px rgba(0, 91, 150, 0.2);
+}
+
+.contact-text {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.legal-sections {
+    margin-top: 4rem;
+}
+
+.legal-content {
+    padding: 2rem;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent2) transparent;
+}
+
+.legal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.legal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.legal-content::-webkit-scrollbar-thumb {
+    background: var(--accent2);
+    border-radius: 3px;
+}
+
+footer { 
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+    background: var(--surface-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+}
+
+.footer-highlight {
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 0.5rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .nav-pills {
+        justify-content: center;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.nav-pill:focus,
+.brand:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Compatibility styles for legacy class names */
+.cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.muted { color: var(--text-secondary); }
+.tiny { font-size: 0.875rem; color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="animated-bg"></div>
+<div class="container">
+  <header>
+    <div class="header-content glass-card">
+      <a href="#" class="brand" aria-label="Insurance EZ LLC Home">
+        <div class="logo" aria-hidden="true">EZ</div> 
+        Insurance EZ, LLC
+      </a>
+      <nav class="nav-pills" role="navigation" aria-label="Insurance services">
+        <a href="#services" class="nav-pill">ACA Plans</a>
+        <a href="#services" class="nav-pill">Medicare</a>
+        <a href="#services" class="nav-pill">Life Insurance</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Insurance Made Simple, <br>Coverage Made Easy</h1>
+      <p class="hero-subtitle lead">Licensed insurance agency helping individuals and families navigate ACA, Medicare, and Life Insurance with confidence and ease.</p>
+      <div class="cta-buttons cta">
+        <a class="btn btn-primary primary" href="#contact" aria-describedby="contact-description">
+          🏥 Get Coverage Now
+        </a>
+        <a class="btn btn-secondary" href="#services">
+          📋 Our Services
+        </a>
+        <a class="btn btn-secondary" href="#privacy">
+          🔒 Privacy Policy
+        </a>
+      </div>
+      <div id="contact-description" class="sr-only">Contact us to start your insurance coverage journey</div>
+    </div>
+  </section>
+
+  <section id="services" class="section grid">
+    <div class="cards-grid">
+      <div class="card glass-card">
+        <div class="card-icon">🏥</div>
+        <h3>What We Do</h3>
+        <p class="muted">Comprehensive insurance services including ACA marketplace plans, Medicare Advantage & Part D, Medicare Supplements, and Life Insurance. We guide you through every step of enrollment and help you understand your options.</p>
+      </div>
+      
+      <div class="card glass-card highlight-card">
+        <div class="card-icon">📱</div>
+        <h3>Message Purpose</h3>
+        <p class="muted">We send helpful SMS reminders with your consent: appointment notifications, enrollment deadlines, and important updates. All messages are informational only - no promotional spam, ever.</p>
+      </div>
+      
+      <div class="card glass-card">
+        <div class="card-icon">⚙️</div>
+        <h3>Opt-In / Opt-Out / Help Keywords</h3>
+        <p class="muted"><strong>Opt-In Keyword:</strong> START<br>
+        Thank you for opting into SMS messaging from Insurance EZ LLC. Message frequency varies. To opt out, text STOP. For assistance, text HELP or visit <a href="https://myinsuranceez.com/" target="_blank">myinsuranceez.com</a>. Message & data rates may apply.<br><br>
+        <strong>Opt-Out Keyword:</strong> STOP<br>
+        You will no longer receive messages from Insurance EZ LLC. To opt back in at any time reply START.<br><br>
+        <strong>Help Keyword:</strong> HELP<br>
+        Thank you for contacting Insurance EZ LLC. You can find help online at <a href="https://myinsuranceez.com/" target="_blank">myinsuranceez.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="card glass-card contact-section">
+      <h3>Contact</h3>
+      <p class="muted">Phone: (954) 736-1704<br>Email: help@myinsuranceez.com<br>10620 GRIFFIN RD, Davie, FL 33328, USA<br>Website: <a href="https://myinsuranceez.com" target="_blank">https://myinsuranceez.com</a></p>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <strong>Call Us</strong><br>
+            <a href="tel:9547361704" style="color: var(--accent); text-decoration: none;">(954) 736-1704</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-text">
+            <strong>Email Us</strong><br>
+            <a href="mailto:help@myinsuranceez.com" style="color: var(--accent); text-decoration: none;">help@myinsuranceez.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-text">
+            <strong>Visit Online</strong><br>
+            <a href="https://myinsuranceez.com" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">myinsuranceez.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <strong>Visit Us</strong><br>
+            10620 Griffin Rd<br>Davie, FL 33328
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="legal-sections">
+    <section id="privacy" class="card glass-card">
+      <h3>🔒 Privacy Policy</h3>
+      <div class="legal-content">
+        <p><strong>Effective Date:</strong> August 2025</p>
+        <p>Insurance EZ LLC is committed to protecting your privacy and personal information security.</p>
+        
+        <h4>Information We Collect</h4>
+        <ul>
+          <li>Name and contact information</li>
+          <li>Date of birth and insurance details</li>
+          <li>Health plan information (as needed)</li>
+          <li>Communications preferences</li>
+        </ul>
+
+        <h4>How We Use Your Information</h4>
+        <ul>
+          <li>Provide and manage insurance services</li>
+          <li>Send appointment reminders and policy updates</li>
+          <li>Communicate important deadlines</li>
+          <li>Comply with legal requirements</li>
+        </ul>
+
+        <h4>Information Sharing</h4>
+        <p>We never sell your personal information. We only share data with:</p>
+        <ul>
+          <li>Insurance carriers for policy servicing</li>
+          <li>Government agencies (as required by law)</li>
+          <li>Approved service providers</li>
+        </ul>
+
+        <h4>SMS Privacy</h4>
+        <p><strong>Your SMS consent is never shared with third parties.</strong> We use your mobile number solely for insurance-related communications with your explicit permission.</p>
+
+        <h4>Your Rights</h4>
+        <p>Request access, correction, or deletion of your personal information by contacting us directly.</p>
+
+        <p><strong>Contact:</strong> (954) 736-1704 • help@myinsuranceez.com</p>
+      </div>
+    </section>
+
+    <section id="terms" class="card glass-card">
+      <h3>📋 SMS Terms & Conditions</h3>
+      <div class="legal-content">
+        <p><strong>Effective Date:</strong> August 2025</p>
+        
+        <h4>Message Purpose</h4>
+        <p>Informational SMS only: appointment reminders, plan renewals, enrollment deadlines, and time-sensitive insurance updates.</p>
+        
+        <h4>Frequency & Consent</h4>
+        <p>Message frequency varies by client needs and enrollment periods. All messages require your written, verbal, or electronic consent.</p>
+        
+        <h4>Opt-Out Instructions</h4>
+        <p>Reply <strong>STOP</strong> to cancel anytime. Reply <strong>HELP</strong> for assistance.</p>
+        
+        <h4>Charges & Privacy</h4>
+        <p>Message and data rates may apply per your carrier plan. <strong>SMS consent is not shared with third parties.</strong></p>
+        
+        <h4>Support</h4>
+        <p>(954) 736-1704 • help@myinsuranceez.com</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="glass-card">
+    <div>© 2025 Insurance EZ, LLC. All rights reserved.</div>
+    <div class="footer-highlight tiny">"SMS consent is not shared with third parties."</div>
+  </footer>
+</div>
+</body>
+</html>
