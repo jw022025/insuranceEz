@@ -7,11 +7,11 @@
     - text: Insurance EZ, LLC
   - navigation "Insurance services":
     - link "ACA Plans":
-      - /url: "#services"
+      - /url: "#aca-plans"
     - link "Medicare":
-      - /url: "#services"
+      - /url: "#medicare"
     - link "Life Insurance":
-      - /url: "#services"
+      - /url: "#life-insurance"
 - heading "Insurance Made Simple, Coverage Made Easy" [level=1]
 - paragraph: Licensed insurance agency helping individuals and families navigate ACA, Medicare, and Life Insurance with confidence and ease.
 - link "🏥 Get Coverage Now":
@@ -41,15 +41,57 @@
   - link "myinsuranceez.com":
     - /url: https://myinsuranceez.com/
   - text: .
+- text: 🏥
+- heading "ACA Marketplace Plans" [level=2]
+- paragraph: Navigate the Health Insurance Marketplace with confidence. We help you understand your options and find the right coverage.
+- heading "What We Offer:" [level=4]
+- list:
+  - listitem: Plan comparison and selection guidance
+  - listitem: Subsidy and tax credit assistance
+  - listitem: Enrollment support and deadline reminders
+  - listitem: Network and provider verification
+  - listitem: Year-round support for plan changes
+- link "Get ACA Help":
+  - /url: "#contact"
+- link "Call Now":
+  - /url: tel:9547081498
+- text: 👥
+- heading "Medicare Plans" [level=2]
+- paragraph: Medicare can be complex. We simplify your options and help you choose the right coverage for your needs and budget.
+- heading "Our Medicare Services:" [level=4]
+- list:
+  - listitem: Medicare Advantage (Part C) plan comparison
+  - listitem: Medicare Supplement (Medigap) options
+  - listitem: Part D prescription drug coverage
+  - listitem: Annual enrollment period guidance
+  - listitem: Provider network verification
+- link "Medicare Consultation":
+  - /url: "#contact"
+- link "Call Now":
+  - /url: tel:9547081498
+- text: 🛡️
+- heading "Life Insurance" [level=2]
+- paragraph: Protect your family's financial future with the right life insurance coverage. We help you find affordable options that fit your needs.
+- heading "Life Insurance Options:" [level=4]
+- list:
+  - listitem: Term life insurance for temporary needs
+  - listitem: Whole life and permanent coverage options
+  - listitem: Coverage amount calculation guidance
+  - listitem: Beneficiary setup assistance
+  - listitem: Policy review and optimization
+- link "Life Insurance Quote":
+  - /url: "#contact"
+- link "Call Now":
+  - /url: tel:9547081498
 - heading "Contact" [level=3]
 - paragraph:
-  - text: "Phone: (954) 736-1704 Email: help@myinsuranceez.com 10620 GRIFFIN RD, Davie, FL 33328, USA Website:"
+  - text: "Phone: (954) 708-1498 Email: help@myinsuranceez.com 10620 GRIFFIN RD, Davie, FL 33328, USA Website:"
   - link "https://myinsuranceez.com":
     - /url: https://myinsuranceez.com
 - text: 📞
 - strong: Call Us
-- link "(954) 736-1704":
-  - /url: tel:9547361704
+- link "(954) 708-1498":
+  - /url: tel:9547081498
 - text: ✉️
 - strong: Email Us
 - link "help@myinsuranceez.com":
@@ -92,7 +134,7 @@
 - paragraph: Request access, correction, or deletion of your personal information by contacting us directly.
 - paragraph:
   - strong: "Contact:"
-  - text: (954) 736-1704 • help@myinsuranceez.com
+  - text: (954) 708-1498 • help@myinsuranceez.com
 - heading "📋 SMS Terms & Conditions" [level=3]
 - paragraph:
   - strong: "Effective Date:"
@@ -113,6 +155,6 @@
   - text: Message and data rates may apply per your carrier plan.
   - strong: SMS consent is not shared with third parties.
 - heading "Support" [level=4]
-- paragraph: (954) 736-1704 • help@myinsuranceez.com
+- paragraph: (954) 708-1498 • help@myinsuranceez.com
 - contentinfo: © 2025 Insurance EZ, LLC. All rights reserved. "SMS consent is not shared with third parties."
 ```
